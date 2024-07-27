@@ -1,0 +1,30 @@
+body{
+  align-items: center;
+  justify-content: center; /* Центрирование квадрата */
+}
+#square {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(75deg,rgb(37,78,204),limegreen);
+    display: flex;
+    background-size: 200% 200%;
+    animation: moveSquare 2s infinite alternate;
+}
+  
+@keyframes moveSquare {
+  0% {
+      transform: translateY(50%);
+  }
+  25% {
+      transform: translateX(100%); /* движение вправо */
+  }
+  50% {
+      transform: translateY(100%); /* движение вниз */
+  }
+  75% {
+      transform: translateX(-100%); /* движение влево */
+  }
+  100% {
+      transform: translateY(-50%); /* движение вверх */
+  }
+}
